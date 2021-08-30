@@ -29,11 +29,15 @@ fetch(api_url)
     .then((res) => res.json())
     .then((data) => {
         let output = `
-            <div>
-            <h3>Hero Details</h3>
+            <div class="jumbotron w-50 my-4 p-3 text-center" style="background:rgba(255,255,255,0.3);color:white;">
+            <h2 class="pb-5">Hero Details</h2>
+            <div class="row">
+            <div class="col-lg-6 col-12 text-center">
+            <img src="${data.image.url}" style="height:20rem;">  
+            <h2 class="pt-3">${data.name}</h2>
             </div>
-            <img src="${data.image.url}" style="height:10rem;">            
-            <h2>Name: ${data.name}</h2>
+            <div class="col-lg-6 col-12 text-center">
+            <h3>Stats</h3>
             <p>Intelligence: ${data.powerstats.intelligence}</p>
             <p>Strength: ${data.powerstats.strength}</p>
             <p>Strength: ${data.powerstats.strength}</p>
@@ -41,9 +45,11 @@ fetch(api_url)
             <p>Durability: ${data.powerstats.durability}</p>
             <p>Power: ${data.powerstats.power}</p>
             <p>Combat: ${data.powerstats.combat}</p>
-
+            </div>
+            </div>
+            </div>
             `;
-            console.log('printing data',data);
+        console.log('printing data', data);
         document.getElementById('heroDetail').innerHTML = output;
     }).catch((err) => console.log(err))
 // }

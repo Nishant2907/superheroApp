@@ -1,0 +1,13 @@
+#main {
+    background-image: url("../images/heroBg.jpg");
+    background-size: no-repeat;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.center {
+    position: relative;
+    transform: translate(0, 15%); 
+}

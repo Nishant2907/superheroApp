@@ -22,11 +22,11 @@ function getApi() {
             dataApi = data["results"];
             Array.from(dataApi).forEach(function (api) {
                 output += `
-            <div class="jumbotron text-center mx-3" id="${api.id}">
-                <img src="${api.image.url}" class="w-75 h-75">
+            <div class=" text-center mx-2 my-0 p-0" id="${api.id}" style="color:white;">
+                <img src="${api.image.url}" class="w-50 h-75">
                 <h3>${api.name}</h3>
-                <button class="btn btn-primary" id="heroDetails">More Details</button>
-            </div>    
+                <button class="btn btn-dark" id="heroDetails">More Details</button>
+            </div>
            `;
             });
             document.getElementById('output').innerHTML = output;
