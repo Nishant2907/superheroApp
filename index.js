@@ -1,8 +1,8 @@
 document.querySelector('form').addEventListener('change', getApi);
 document.getElementById('getApi').addEventListener('click', getApi);
 
-   const token = 'https://superheroapi.com/api.php/1320815831666438/search/';
-     
+const token = 'https://superheroapi.com/api.php/1320815831666438/search/';
+
 // document.getElementById('heroDetails').addEventListener('click', heroData);
 
 function getApi() {
@@ -31,23 +31,7 @@ function getApi() {
             });
             document.getElementById('output').innerHTML = output;
         }).catch((err) => console.log(err))
-     }
-
-// Handling details, add favourite actions
-document.addEventListener('click', (event) => {
-    // Details button
-    if(event.target.id == 'heroDetails'){
-        var id = event.target.parentNode.id;
-        window.open('./hero.html'+'?id='+id, "_self");
-        // console.log(id);
-    }
-});
-
-// extracting ID from the url
-function extractId(){
-    const url = location.search;
-    return url.substring(url.indexOf('=')+1);
 }
 
-
 // Hero details
+// document.getElementById('heroDetails').addEventListener(click, getDetails());
