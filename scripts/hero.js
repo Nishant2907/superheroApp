@@ -18,12 +18,9 @@ function extractId() {
 }
 var api_id = extractId();
 
+
 const api_url = 'https://superheroapi.com/api.php/1320815831666438/' + api_id;
-// console.log(api_url);
 
-// getDetails();
-
-// function getDetails() {
 console.log(api_url);
 fetch(api_url)
     .then((res) => res.json())
@@ -38,8 +35,8 @@ fetch(api_url)
             </div>
             <div class="col-lg-6 col-12 text-center">
             <h3>Stats</h3>
+            <p>Gender: ${data.appearance.gender}</p>
             <p>Intelligence: ${data.powerstats.intelligence}</p>
-            <p>Strength: ${data.powerstats.strength}</p>
             <p>Strength: ${data.powerstats.strength}</p>
             <p>Speed: ${data.powerstats.speed}</p>
             <p>Durability: ${data.powerstats.durability}</p>
@@ -52,4 +49,3 @@ fetch(api_url)
         console.log('printing data', data);
         document.getElementById('heroDetail').innerHTML = output;
     }).catch((err) => console.log(err))
-// }

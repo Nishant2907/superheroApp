@@ -3,14 +3,11 @@ document.getElementById('getApi').addEventListener('click', getApi);
 
 const token = 'https://superheroapi.com/api.php/1320815831666438/search/';
 
-// document.getElementById('heroDetails').addEventListener('click', heroData);
 
 function getApi() {
     var heroName = document.getElementById('heroName').value;
-    // console.log(heroName);
 
     var url = token + heroName;
-    // console.log(url);
 
     fetch(url)
         .then((res) => res.json())
@@ -33,5 +30,3 @@ function getApi() {
         }).catch((err) => console.log(err))
 }
 
-// Hero details
-// document.getElementById('heroDetails').addEventListener(click, getDetails());
